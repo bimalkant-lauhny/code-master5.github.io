@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "Baloo Thambi";
+    src: url("/fonts/baloo-thambi.ttf");
+}
+
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Baloo Thambi', cursive;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background: url("https://cloud.githubusercontent.com/assets/16593502/21570533/cce3ee8a-ceec-11e6-94db-30ccc16e5f04.jpg") no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+.overlay {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  overflow: auto;
+}
+
+.header {
+  z-index: 1;
+}
+
+.main {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  position: absolute;
+  visibility: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content {
+  width: 250px;
+  margin: auto;
+  vertical-align: middle;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.place,
+.weather,
+.weatIcon,
+.temp {
+  color: rgb(200, 202, 203);
+  font-size: 20px;
+}
+
+.place {
+  padding: 20px 10px 10px 10px;
+}
+
+.weather,
+.weatIcon {
+  padding: 10px;
+}
+
+.temp {
+  padding: 10px 10px 20px 10px;
+}
+
+.recept {
+  font-size: 4em;
+}
+
+@media screen and (max-width: 550px) {
+    .recept {
+        font-size: 3em;
+    }
+}
+
+button {
+  margin: 20px;
+  font-family: 'Baloo Thambi', cursive;
+  background: rgb(245, 82, 70);
+  border-radius: 5px;
+  border: none;
+  /* Green */
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: rgb(76, 175, 80);
+  /* Green */
+  color: white;
+}

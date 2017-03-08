@@ -1,0 +1,317 @@
+@font-face {
+    font-family: "lulo-clean";
+    src: url("../fonts/lulo-clean.ttf");
+}
+
+@font-face {
+    font-family: "lulo-bold";
+    src: url("../fonts/lulo-clean-w01-one-bold.ttf");
+}
+
+@font-face {
+    font-family: "avenir";
+    src: url("../fonts/avenir-light.ttf");
+}
+
+html, body, main, nav, footer {
+    font-family: "lulo-clean";
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #00D646;
+}
+
+ul {
+   list-style-type: none; 
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+}
+
+nav {
+    background: #333B50; 
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.full-expand {
+   min-width: 100%;
+   max-width: 100%;
+}
+
+.fluid-container {
+    width: 100%;
+    max-width: 980px; 
+}
+
+.spacer {
+    min-height: 60px;
+    max-height: 60px;
+}
+
+.container {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+}
+
+ul.topnav {
+    display: none;
+    width: 100%;
+}
+
+ul.topnav li {
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.resp-img {
+    height: 30px;
+    width: 30px;
+    padding: 9px
+}
+
+.me {
+    height: 40px;
+    width: 140px;
+    float: left;
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.resp-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    float: right;
+    height: 48px;
+    width: 48px;
+    margin: 16px 16px;
+    text-align: center;
+}
+
+.highlight {
+    color: #00D646;
+}
+
+.intro1 {
+    font-family: "lulo-bold";
+    font-size: 45px;
+    padding: 50px 20px;
+    margin: 0;
+}
+
+.name {
+    font-size: 32px;
+}
+
+.intro2 {
+    margin: 0;
+    font-size: 25px;
+    padding: 20px;
+}
+
+#home, #professional, #portfolio, #contact {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+#home {
+    background: url("../images/home.jpg");
+}
+
+.overlay {
+    background: rgba(112, 122, 138, 0.5);
+    height: 100%;
+}
+
+.blue-box {
+    background: #333B50; 
+    color: #FFFFFF;
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 80%;
+    min-width: 80%; 
+    font-family: "avenir";
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.resume-p {
+    margin: 15px;
+    font-size: 18px;
+}
+
+.res-dl {
+    border: 1px solid #00D646;
+    width: 202px;
+    height: 50px;
+    font-size: 12px;
+    line-height: 50px;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.res-dl:hover {
+    color: #FFFFFF;
+    background: #00D646;
+}
+
+#professional {
+    background: url("../images/professional.jpg");
+}
+
+.pro-head {
+    font-family: "lulo-bold";
+    font-size: 27px;
+}
+
+.pro-subhead {
+    font-size: 18px;
+}
+
+.pro-head, .pro-subhead {
+    margin: 0;
+    text-align: center;
+    padding: 25px 0 25px 0;
+}
+
+.green-head {
+    font-family: "lulo-clean";
+    color: #00D646; 
+}
+
+.pro-lang, .pro-web-tech, .pro-others {
+    padding: 20px;
+    width: 250px;
+    margin: 30px auto;
+    background: #333B50; 
+    font-family: "avenir";
+}
+
+#contact {
+    background: url("../images/contact.jpg");
+    height: auto;
+}
+
+@media screen and (min-width: 980px) {
+    .fluid-container {
+        margin: 0 auto;
+    }
+    
+    .intro1, .intro2 {
+        margin: 0 0 0 100px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+   .resp-icon {
+       display: none;
+   } 
+   
+   ul.topnav {
+       display: inline !important;
+   }
+   
+   ul.topnav li {
+       display: inline;
+       margin: 0 20px;
+   }
+   
+   ul.topnav li a {
+       text-align: center;
+       line-height: 80px;
+   }
+}
+
+@media screen and (min-width: 550px) {
+    #home, #professional, #contact {
+        background-attachment: fixed;
+    }
+}
+
+footer {
+    font-family: "avenir";
+    background: #333B50; 
+    letter-spacing: 1px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.foot-cr {
+    font-family: "lulo-clean";
+    letter-spacing: 1px;
+}
+
+.foot-code {
+    color: #00D646;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.spacer2 {
+    min-height: 30px;
+    max-height: 30px;
+}
+
+.contact-header {
+    font-family: "lulo-bold";
+    font-size: 27px;
+    text-align: center;
+}
+
+.contact-p {
+    text-align: center;
+}
+
+.mail, .contact-icons {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-icons li {
+    display: inline;
+}
+
+.contact-icons img{
+    max-height: 48px;
+    min-height: 48px;
+    min-width: 48px;
+    max-width: 48px;
+    margin: 10px 20px;
+}
+
+.contact-icons img:hover {
+    transform: scale(1.5);
+}
+
+@media screen and (max-width: 400px) {
+    .intro1, .intro2, .name, .pro-head {
+        font-size: 20px;
+    }
+    .foot-code {
+        font-size: 12px;
+    }
+}

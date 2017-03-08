@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "lulo-clean";
+    src: url("../fonts/lulo-clean.ttf");
+}
+
+html, body {
+    font-family: "lulo-clean";
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('../images/drumKitBackgSmall.jpg') bottom center;
+    background-size: cover;
+    text-shadow: 0 0 .5rem #FFFF00;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    background: rgba(50, 50, 0, 0.4);
+}
+
+.header {
+    font-size: 50px;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}
+
+kbd {
+    font-size: 30px;
+}
+
+.keys {
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+.key {
+    transition: all .07s ease;
+    text-align: center;
+    min-height: 70px;
+    min-width: 70px;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    margin: 20px;
+    text-align: center;
+    
+}
+
+.sound {
+    margin: 5px auto;
+    font-size: 10px;
+    display: block;
+    color: #ffc600;
+}
+
+.playing {
+  transform: scale(1.2);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+.instruct {
+    text-align: center;
+    font-size: 15px; 
+    padding: 10px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 650px) {
+    
+    body {
+        background: url("../images/drumKitBackg.jpg");
+        background-size: 100% 100%; 
+    }
+    
+   .key {
+        min-width: 80px;
+        min-height: 80px;
+    } 
+    
+    .header {
+        padding: 30px;
+    }
+}
