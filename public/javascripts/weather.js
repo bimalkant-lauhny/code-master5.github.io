@@ -77,12 +77,12 @@ function getContent (weatherId) {
 };
 
 var weatherIcons = {
-    "thunderstorm": ["/images/weatherImages/thunderstorm.jpg", "/icons/weatherIcons/thunderstorm.png"],
-    "rain": ["/images/weatherImages/rain.jpg", "/icons/weatherIcons/rain.png"],
-    "snow": ["/images/weatherImages/snow.jpg", "/icons/weatherIcons/snow.png"],
-    "atmosphere": ["/images/weatherImages/atmosphere.jpg", "/icons/weatherIcons/atmosphere.png"],
-    "clouds": ["/images/weatherImages/clouds.jpg", "/icons/weatherIcons/clouds.png"],
-    "clear": ["/images/weatherImages/clear.jpg", "/icons/weatherIcons/clear.png"],
-    "extreme": ["/images/weatherImages/extreme.jpg", "/icons/weatherIcons/extreme.png"],
-    "breeze": ["/images/weatherImages/breeze.jpg", "/icons/weatherIcons/breeze.png"]
+    "thunderstorm": ["./public/images/weatherImages/thunderstorm.jpg", "./public/icons/weatherIcons/thunderstorm.png"],
+    "rain": ["./public/images/weatherImages/rain.jpg", "./public/icons/weatherIcons/rain.png"],
+    "snow": ["./public/images/weatherImages/snow.jpg", "./public/icons/weatherIcons/snow.png"],
+    "atmosphere": ["./public/images/weatherImages/atmosphere.jpg", "./public/icons/weatherIcons/atmosphere.png"],
+    "clouds": ["./public/images/weatherImages/clouds.jpg", "./public/icons/weatherIcons/clouds.png"],
+    "clear": ["./public/images/weatherImages/clear.jpg", "./public/icons/weatherIcons/clear.png"],
+    "extreme": ["./public/images/weatherImages/extreme.jpg", "./public/icons/weatherIcons/extreme.png"],
+    "breeze": ["./public/images/weatherImages/breeze.jpg", "./public/icons/weatherIcons/breeze.png"]
 };
