@@ -310,7 +310,7 @@ footer {
 }
 
 .contact-icons img:hover {
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 @media screen and (max-width: 400px) {
