@@ -1,5 +1,5 @@
-var trigram = "/icons/trigram.png";
-var cross = "/icons/cross.png";
+var trigram = "./public/icons/trigram.png";
+var cross = "./public/icons/cross.png";
 
 var nav = document.getElementsByTagName('nav')[0];
 var topnav = document.getElementById('mytopnav');
