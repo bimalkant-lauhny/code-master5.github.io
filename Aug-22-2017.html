@@ -289,18 +289,22 @@
 
                   <br/>
 
-                  <p>Here are some important points for what's next.</p>
+                  <p>Here are some important points for what's left <b>TODO</b>.</p>
 
                   <!-- Post List Style Start -->
                   <div class="list">
                     <ul>
                       <li>
+                        Complete the C-based callstats event handler for Janus
                       </li>
                       <ul>
-                        <li></li>
-                        <li>
-                          </a>
+                        <li>Add threads support to send User Alive event to callstats.io</li>
+                        <li>Parse the SDP received from events to extract SSRC values</li>
+                        <li>Correlate the data from received events and database
+                          and use <b>callstats_send_stats<b> for sending stats
                         </li>
+                        <li>Add origin_id support for the project (see callstats REST API)</li>
+                        <li>Compile the event handler library with Janus-gateway</li>
                       </ul>
                     </ul>
                   </div>
@@ -316,7 +320,7 @@
                           target="_blank">Jangouts</a></li>
                           <ul>
                             <li>IRC - #jangouts</li>
-                            <li>Mailing List -
+                            <li>
                               <a href="https://groups.google.com/forum/#!forum/jangouts">
                                 Google Group
                               </a>
@@ -325,7 +329,7 @@
                       <li><a href="https://github.com/meetecho/janus-gateway"
                           target="_blank">Janus-gateway</a></li>
                           <ul>
-                            <li>Mailing List -
+                            <li>
                               <a href="https://groups.google.com/forum/#!forum/meetecho-janus">
                                 Google Group
                               </a>
@@ -333,6 +337,10 @@
                           </ul>
                       <li><a href="https://callstats.io"
                           target="_blank">callstats.io</a></li>
+                      <li><a href="https://docs.callstats.io/"
+                          target="_blank">callstats.io REST API</a></li>
+                      <li><a href="https://www.callstats.io/api/"
+                          target="_blank">callstats object based API</a></li>
                       <li><a href="https://www.callstats.io/2017/08/01/gsoc-jangouts-janus-integration/"
                           target="_blank">My short interview by callstats.io</a></li>
                       <li><a href="https://drive.google.com/open?id=0B6fLXtevdj4IYjF1RVRJMmhFWFE"
