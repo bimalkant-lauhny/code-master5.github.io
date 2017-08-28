@@ -170,7 +170,7 @@
                   </p>
                   </div>
                   <!-- Post Image End -->
-
+                  <br />
                   <div class="post-title">
                     <h2>Introduction</h2>
                   </div>
@@ -188,6 +188,8 @@
                        openSUSE
                     </a>.
                   </p>
+
+                  <br />
 
                   <div class="post-title">
                     <h2>Getting Started</h2>
@@ -222,6 +224,7 @@
                     <b>Jangouts</b> and decided to contribute to the project.
                   </p>
 
+                  <br />
                   <div class="post-title">
                     <h2>What is Jangouts?</h2>
                   </div>
@@ -243,13 +246,255 @@
                     supports conferences with video, audio, screen sharing and
                     textual chat organized into an unlimited amount of conference
                     rooms with a configurable limit of participants per room.
-                    For more info on Jangouts, visit 
+                    For more info on Jangouts, visit
                     <a href="https://github.com/jangouts/jangouts"
                        target="_blank">
                        here
                     </a>.
                   </p>
 
+                  <br />
+                  <div class="post-title">
+                    <h2>Contributions before GSoC official coding period</h2>
+                  </div>
+
+                  <p>
+                    First task was to build the <b>Jangouts</b> and <b>Janus
+                    gateway</b> on my local machine. I joined <b>#jangouts</b>
+                    on IRC for getting some help from the Jangouts team of contributors.
+                    Building Janus gateway was easy part, but, running Jangouts
+                    local instance was difficult and tricky. My mentors
+                    <a href="https://github.com/ancorgs"
+                      target="_blank">
+                      Ancor
+                    </a>
+                    and
+                     <a href="https://www.linkedin.com/in/imobachgs/"
+                      target="_blank">
+                      Imobach
+                    </a>
+                    helped me out a lot in this task. Finally,
+                    our combined efforts paid off, and, I was successful in
+                    building and running a local Jangouts instance.
+                  </p>
+                  <p>
+                    Now, I had to start contributing some code to the
+                    <a href="https://github.com/jangouts/jangouts"
+                       target="_blank">
+                       Jangouts repository on Github
+                    </a>.
+                    For that, I visited openSUSE mentoring repository and
+                    started looking into related
+                    <a href="https://github.com/openSUSE/mentoring/issues?q=is%3Aopen+is%3Aissue+label%3AJangouts"
+                       target="_blank">
+                      issues
+                    </a>. There, in the conversations, I read about
+                    <a href="https://github.com/jangouts/jangouts/issues?q=is%3Aissue+label%3A%22junior+job%22+is%3Aclosed"
+                       target="_blank">
+                       Junior Jobs
+                    </a>
+                    for getting started. So, I started working on these issues.
+                  </p>
+
+                  <br/>
+
+                  <h4>TypeError issue</h4>
+                  <p>
+                    My first Pull request to the project solved a simple
+                    bug. While trying to build the Jangouts, I could see in
+                    the browser console, that there was some error in reading
+                    the Jangouts config file. I found out, that due to TypeError,
+                    the local instance was not running. I opened a
+                    <a href="https://github.com/jangouts/jangouts/issues/179"
+                       target="_blank">
+                       TypeError issue
+                    </a>.
+                    Then I sent a
+                    <a href="https://github.com/jangouts/jangouts/pull/180"
+                      target="_blank">
+                      Pull request
+                    </a> adding a typecheck inside <code>replacePlaceholder()</code>
+                    function before returning the value in <code>room.service.js</code>
+                    file.
+                  </p>
+
+                  <br/>
+
+                  <h4>Username Edit Feature</h4>
+                  <p>
+                    <a href="https://github.com/jangouts/jangouts/issues/15"
+                      target="_blank">
+                        Username Change Feature
+                    </a>
+                    was the first Junior Job I worked out. The aim was to
+                    allow users in a room to change their names without signing
+                    out. The task could be divided into two main parts -
+                  </p>
+                  <ul>
+                    <li>Updating the name in Feeds object</li>
+                    <li>Showing the change to the user</li>
+                  </ul>
+                  <p>
+                    First, I designed a UI for name edit. Now the next problem was
+                    that, there was no inbuilt support for <code>auto-focus</code>
+                    attribute for <code>input</code> tag, hence, I designed a
+                    custom auto focus directive <code>autofocus.directive.js</code>.
+                    Rest part was to just carry out changes in
+                    <code>feeds.factory.js</code> to change the user name in the
+                    Feed object. Again, Ancor and Imobach helped me out in this
+                    to design a good UI for better UX.
+                  </p>
+
+                  <br />
+
+                  <h4>PIN Code Rooms</h4>
+                  <p>
+                    <a href="https://github.com/jangouts/jangouts/issues/130"
+                      target="_blank">
+                        PIN Code Rooms Feature
+                    </a>
+                    was a very exciting feature that I worked on. The aim was to
+                    allow users to join PIN protected rooms as configured in the
+                    Janus-gateway configs. Earlier, if admin had created a PIN
+                    protected room
+                    in Janus config, it was visible in the rooms list in Jangouts
+                    sign-in page like every other room. But, no one could enter
+                    the room, even if they know the PIN, since, there was no way
+                    to send PIN in the room-join request. The task could be divided
+                    into three main parts -
+                  </p>
+                  <ul>
+                    <li>Designing a UI at sign-in page to allow user to enter
+                    the PIN</li>
+                    <li>Sending the pin along with the join request to Janus
+                    instance</li>
+                    <li>Handling wrong PIN error</li>
+                  </ul>
+                  <p>
+                    Here, designing UI was simple. I added the UI in <code>
+                    jh-signin-form.html</code> and added the support in
+                    <code>jh-signin-form.directive.js</code>. The idea
+                    was, that the UI should appear only if the selected room
+                    required PIN for entering. The problem was that, there was
+                    no such field in rooms list object which Jangouts was receiving
+                    from running instance of Janus. So, I had to make a
+                    <a href="https://github.com/meetecho/janus-gateway/issues/826"
+                      target="_blank">
+                      feature request
+                    </a>
+                    at the Janus-gateway Github repository. Thanks to
+                    Lorenzo, I didn't need to add the feature myself. He added it
+                     in just 2 days. Next, I had to
+                    send the entered PIN in the join request, i.e. inside
+                    <code>FeedConnection.register</code> function (inside
+                    <code>room.service.js</code>). To access the
+                    PIN entered by user, I stored it inside <code>UserService.js</code>.
+                    The final part of handling the <code>Wrong PIN</code> error
+                    was done in <code>room.controller.js</code>. You can see the
+                    related Pull request
+                    <a href="https://github.com/jangouts/jangouts/pull/182"
+                      target="_blank">
+                      here
+                    </a>.
+                  </p>
+
+                  <br />
+
+                  <h4>Cross-Browser Fullscreen Video support</h4>
+                  <p>
+                    <a href="https://github.com/jangouts/jangouts/issues/130"
+                      target="_blank">
+                        Cross-Browser Fullscreen Video Feature
+                    </a>
+                    was the next feature I decided to work upon. The aim was to
+                    allow users to enjoy a fullscreen support for video stream.
+                    Earlier, if some user entered a room, and received a video
+                    stream of some other participant, there was no way to turn
+                    the received video stream to fullscreen mode. The task could
+                    be divided into three main parts -
+                  </p>
+                  <ul>
+                    <li>Accomodating the feature support in the existing UI</li>
+                    <li>Adding an event-listener which listened to the fullscreen
+                    request by the user</li>
+                    <li>Making feature cross-browser compatible</li>
+                  </ul>
+                  <p>
+                    First of all, I worked upon adding the event-listener
+                    <code>dblclick</code> for toggling fullscreen mode. Then I
+                    added cross-browser support by using browser specific prefixes.
+                    The changes can be seen in <code>jh-main-feed.directive.js</code>
+                    file. But there was a problem here. The <code>video</code> tag
+                    inside <code>jh-main-feed.html</code> was being flipped by
+                    180 degrees horizontally to neutralize the effect of rotation
+                    in the received stream. <code>transform</code> CSS property was
+                    being used for this. As the user clicked for fullscreen mode,
+                    the <code>transform</code> property no longer worked, and, the
+                    video stream was back to rotated mode. This change was easily
+                    visible and was annoying from a user's perspective. Thanks
+                    to <a href="https://github.com/dgdavid"
+                          target="_blank">
+                          David Diaz
+                        </a>'s
+                    suggestion, I wrapped the <code>video</code> tag inside a
+                    <code>div</code>, and then applied the <code>transform</code>
+                    property. This worked like a charm. You can see the related
+                    PR
+                    <a href="https://github.com/jangouts/jangouts/pull/185"
+                      target="_blank">
+                      here
+                    </a>.
+                  </p>
+
+                  <br />
+                  <br />
+
+                  <p>
+                    So, this was all that I did before the GSoC coding period, even,
+                    before the GSoC announced the list of selected participants. During
+                    all this time, I also worked on two proposals.  Also, I took
+                    a break from IRC for around 15 days because
+                    of my exams. In between my exams, the Google announced the
+                    list of selected candidates. I was very happy to see my name
+                    in the selected students' list under openSUSE organization.
+                    The proposal that got selected is
+                    <a href="https://drive.google.com/open?id=0B6fLXtevdj4IYjF1RVRJMmhFWFE"
+                      target="_blank">
+                      this
+                    </a>. So, now I had to work on project -
+                    <a href="https://summerofcode.withgoogle.com/projects/#4710360429887488"
+                      target="_blank">
+                        Integrate callstats.io into Jangouts
+                    </a>.
+                  </p>
+                  <p>
+                    Directly after my exams, community bonding period
+                    started. Community bonding period involved an introduction to
+                    the callstats.io service by the
+                    <a href="https://callstats.io/"
+                      target="_blank">
+                        callstats.io
+                    </a>
+                    team. This introduction was carried out in a video conference
+                    in which I and Ancor participated from Jangouts side, and,
+                    <a href="https://www.linkedin.com/in/binoychemmagate/"
+                      target="_blank">
+                        Binoy
+                    </a>,
+                    <a href="https://www.linkedin.com/in/karthikbr/"
+                      target="_blank">
+                      Karthik
+                    </a> and
+                    <a href="https://www.linkedin.com/in/varunrsingh/"
+                      target="_blank">
+                        Varun
+                    </a>
+                    participated from callstats side. Other than this, mostly, I
+                    worked upon getting a good understanding of the callstats.io
+                    object based API during the community bonding period, and, also
+                    tried to find out the places in the Jangouts code-base where
+                    callstats object based API calls were to be put.
+                  </p>
                   <!-- Post Author Bio Box Start -->
                   <div class="about-author margin-top-70 margin-bottom-50">
 
