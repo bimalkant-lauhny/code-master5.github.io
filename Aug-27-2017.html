@@ -254,6 +254,7 @@
                   </p>
 
                   <br />
+
                   <div class="post-title">
                     <h2>Contributions before GSoC official coding period</h2>
                   </div>
@@ -467,6 +468,84 @@
                         Integrate callstats.io into Jangouts
                     </a>.
                   </p>
+
+                  <br />
+
+                  <div class="post-title">
+                    <h2>A Brief Intro to my GSoC Project</h2>
+                  </div>
+
+                  <p>
+                    As you've read above this para, my project for this GSoC
+                    was -
+                    <a href="https://summerofcode.withgoogle.com/projects/#4710360429887488"
+                      target="_blank">
+                        Integrate callstats.io into Jangouts
+                    </a>.
+                    <a>Jangouts</a> developers receive a lot of complains and
+                    issues regarding connection problems. These are common in
+                    a WebRTC based application. The idea of the project is to
+                    provide such users with a detailed explaination and reasoning
+                    regarding <b>what went wrong</b> in such situations. For
+                    example, some of the related issues are:
+                  </p>
+
+                  <ul>
+                    <li>
+                      <a href="https://github.com/jangouts/jangouts/issues/189"
+                      target="_blank">
+                      can not hear or see other people in the room but icons show up
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://github.com/jangouts/jangouts/issues/184"
+                      target="_blank">
+                      Other people can not see or hear me (allowed audio/video)
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://github.com/jangouts/jangouts/issues/174"
+                      target="_blank">
+                      Can't see or send messages to other people in the same room
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="https://github.com/jangouts/jangouts/issues/170"
+                      target="_blank">
+                      audio channel often disconnected
+                    </a>
+                  </li>
+                </ul>
+                <p>
+                    Other than these, there are a lot of such issues brought up
+                    on <b>IRC channel (#jangouts)</b> and
+                    <a href="https://groups.google.com/forum/#!forum/jangouts"
+                      target="_blank">
+                      Google Group
+                    </a>.
+                    <a href="https://callstats.io"
+                      target="_blank">
+                      callstats.io
+                    </a>
+                    is one such service where admin, who deployed any WebRTC based
+                    application, after performing integration with callstats.io,
+                    can monitor conferences and calls made using the application,
+                    by different users. So, if some user complains of such
+                    connection issues, the admin can look into the stats and reports
+                    regarding the call made by the user, generated on his dashboard
+                    at callstats.io, and, can easily explain to the user, what
+                    happened when the user tried to join a call.
+
+                    In our case, I had to perform those integration steps for
+                    Jangouts under this GSoC summer project.
+
+                  </p>
+
+                  <br/>
+
                   <p>
                     Directly after my exams, community bonding period
                     started. Community bonding period involved an introduction to
@@ -495,6 +574,63 @@
                     tried to find out the places in the Jangouts code-base where
                     callstats object based API calls were to be put.
                   </p>
+
+                  <br />
+                  <br />
+
+                  <div class="post-title">
+                    <h2>Contributions during GSoC official coding period</h2>
+                  </div>
+
+                  <p>
+                    After the Community Bondig Period ended, the GSoC Official
+                    Coding period started. I joined
+                    <a href="https://callstatsio.slack.com/"
+                      target="_blank">
+                        callstats.io slack channel
+                    </a>
+                    for guidance on callstats.io API. Given below are my contributions
+                    during this period.
+                  </p>
+
+                  <br/>
+
+                  <h4>Documentation explaining Components interaction in
+                  Jangouts </h4>
+
+                  <p>
+                    Before working on the Jangouts side callstats integration,
+                    Ancor, my mentor, wanted me to get an indepth understanding
+                    of the interaction among the components in Jangouts code base.
+                    Therefore, he asked me to design a detailed documentation
+                    describing the working details of the Jangouts. I couldn't
+                    agree more with Ancor on this, because, although I had some
+                    knowledge regarding the interaction among components in
+                    Jangouts, there was still a lot to discover and it was better
+                    to document it. Ultimately, in order to carry out the callstats
+                    integration, I had to extract required data to send to
+                    callstats API. Therefore, in-depth knowledge of the working
+                    details of the Jangouts code-base was necessary, so that, the
+                    API calls would be placed at relevant places in the code-base.
+                    After a lot of digging into the code-base, examining every
+                    request to, and, response from the Janus gateway, I was able
+                    to design a good documentation explaining the details on how
+                    Jangouts work. You can see the PR
+                    <a href="https://github.com/jangouts/jangouts/pull/196"
+                      target="_blank">
+                      here
+                    </a>. I've tried to document the working details in an easy
+                    to understand manner, along with diagrams to supplement the
+                    level of understanding.
+                  </p>
+
+                  <br/>
+
+                  <h4></h4>
+
+                  <p>
+                  </p>
+
                   <!-- Post Author Bio Box Start -->
                   <div class="about-author margin-top-70 margin-bottom-50">
 
