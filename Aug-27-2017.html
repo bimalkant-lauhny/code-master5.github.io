@@ -676,6 +676,47 @@
                     </a>.
                   </p>
 
+                  <br/>
+
+                  <h4>Integration of callstats.io service into Janus</h4>
+
+                  <p>
+                    This part was relatively more time consuming and difficult.
+                    As explained earlier, the idea was to extract relevant stats
+                    from Janus-gateway and send to callstats REST API. After a
+                    lot of discussions, Ancor, I and callstats team agreed upon
+                    designing an event handler inside Janus-gateway to send the
+                    received events to callstats REST API. When we started working
+                    on this part, we realized that there were a lot of ambiguities
+                    regarding the compatibility of callstats REST API with Janus.
+                    Also, the work was to be carried out in C language.
+                    So, Ancor suggested me to build a prototype first in JavaScript
+                    and get a good understanding of the callstats REST API. I started
+                    working on a JavaScript based prototype of the project. During
+                    this part, we realized that there was indeed incompatibility
+                    between the Janus and REST API. Callstats guys then did some
+                    changes to the API for supporting Janus-gateway. Before, the
+                    changes were done in the API, I completed the
+                    <a href="https://github.com/code-master5/janus-callstats-integration"
+                      target="_blank">
+                      JavaScript prototype
+                    </a>. The next task was to create a new callstats event-handler
+                    that would correlate the data from received events and will
+                    send to callstats. I've done a lot of work on this as you can
+                    see
+                    <a href="https://github.com/code-master5/janus-gateway/tree/callstats-integration"
+                      target="_blank">
+                      here
+                    </a>
+                    and
+                    <a href="https://github.com/code-master5/C-callstats-library"
+                      target="_blank">
+                      here
+                    </a>.
+                    This part is still under progress and 2 REST API calls
+                    are to be completed. I hope to complete this soon.
+                  </p>
+
                   <!-- Post Author Bio Box Start -->
                   <div class="about-author margin-top-70 margin-bottom-50">
 
