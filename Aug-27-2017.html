@@ -520,7 +520,7 @@
                   </li>
                 </ul>
                 <p>
-                    Other than these, there are a lot of such issues brought up
+                    Other than these, a lot of such issues are brought up
                     on <b>IRC channel (#jangouts)</b> and
                     <a href="https://groups.google.com/forum/#!forum/jangouts"
                       target="_blank">
@@ -537,14 +537,41 @@
                     connection issues, the admin can look into the stats and reports
                     regarding the call made by the user, generated on his dashboard
                     at callstats.io, and, can easily explain to the user, what
-                    happened when the user tried to join a call.
-
-                    In our case, I had to perform those integration steps for
-                    Jangouts under this GSoC summer project.
-
+                    happened when the user tried to join a call. In our case,
+                    I had to perform those integration steps for <b>Jangouts</b>
+                    under this GSoC summer project.
                   </p>
 
-                  <br/>
+                  <p>
+                    The project can be broadly divided into two main parts -
+                  </p>
+                  <ul>
+                    <li>Integration of callstats.io into Jangouts</li>
+                    <p>This part deals with extracting endpoint stats from within
+                      Jangouts WebRTC components and sending them to callstats
+                      using callstats
+                      <a href="https://www.callstats.io/api/"
+                        target="_blank">
+                        Object-based API
+                      </a>
+                    </p>
+                    <li>Integration of callstats.io into Janus</li>
+                    <p>This part deals with extracting WebRTC gateway stats from
+                      Janus-gateway and sending them to callstats using the
+                      callstats
+                      <a href="http://docs.callstats.io/"
+                        target="_blank">
+                        REST API
+                      </a>
+                      </p>
+                  </ul>
+
+                  <br />
+                  <br />
+
+                  <div class="post-title">
+                    <h2>Contributions during GSoC official coding period</h2>
+                  </div>
 
                   <p>
                     Directly after my exams, community bonding period
@@ -574,13 +601,6 @@
                     tried to find out the places in the Jangouts code-base where
                     callstats object based API calls were to be put.
                   </p>
-
-                  <br />
-                  <br />
-
-                  <div class="post-title">
-                    <h2>Contributions during GSoC official coding period</h2>
-                  </div>
 
                   <p>
                     After the Community Bondig Period ended, the GSoC Official
@@ -619,16 +639,41 @@
                     <a href="https://github.com/jangouts/jangouts/pull/196"
                       target="_blank">
                       here
-                    </a>. I've tried to document the working details in an easy
-                    to understand manner, along with diagrams to supplement the
-                    level of understanding.
+                    </a>. I've tried to document the working details, along with
+                    diagrams to supplement the understanding.
                   </p>
 
                   <br/>
 
-                  <h4></h4>
+                  <h4>Integration of callstats.io service into Jangouts</h4>
 
                   <p>
+                    In this part, I first implemented a simple
+                    <a href="https://github.com/code-master5/jangouts/tree/callstats-integration">
+                      prototype
+                    </a>
+                    to
+                    get a good understanding of the callstats Object-based API.
+                    I also prepared a
+                    <a href="https://gist.github.com/code-master5/7eb1f0210ef236603434bf4e8ea99daa">
+                      documentation
+                    </a>
+                    to explain the placement
+                    of API calls inside Jangouts components. Now comes the original
+                    implementation part. Ancor, Imo and I decided to seperate the
+                    event generation and manipulation inside Jangouts. The idea
+                    was to enable Jangouts to generate events and enable any
+                    external service to receive these events and manipulate them
+                    according to the use case. We decided to use RxJS for implementing
+                    and event emitter inside Jangouts. I worked on the idea by
+                    creating an event emitter Subject to which any external service
+                    could subscribe. Then I implemented a Callstats module which
+                    subscribed to the emitted events and was able to send it
+                    to callstats.io. You can see the code
+                    <a href="https://github.com/jangouts/jangouts/pull/209"
+                      target="_blank">
+                      here
+                    </a>.
                   </p>
 
                   <!-- Post Author Bio Box Start -->
