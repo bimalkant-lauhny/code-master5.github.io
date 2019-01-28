@@ -79,6 +79,7 @@ b {
 p {
     font-size: 14px;
     font-family: "Poppins", sans-serif;
+    text-align: justify;
 }
 
 button {
